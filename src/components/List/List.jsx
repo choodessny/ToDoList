@@ -48,6 +48,7 @@ const List = () => {
     <>
       <div class="container_for_search_line">
         <input
+          placeholder="Добавьте задачу..."
           class="input_line"
           value={text}
           onChange={(event) => setText(event.target.value)}
