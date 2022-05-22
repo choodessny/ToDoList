@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Item from "../Item/Item";
+import plus from "../../resources/plus-solid.svg";
 
 function getItem(item, setTodos, todos) {
   return (
@@ -45,8 +46,9 @@ const List = () => {
   };
   return (
     <>
-      <div>
+      <div class="container_for_search_line">
         <input
+          class="input_line"
           value={text}
           onChange={(event) => setText(event.target.value)}
           onKeyDown={(event) => {
@@ -55,8 +57,8 @@ const List = () => {
             }
           }}
         />
-        <button disabled={!text} onClick={addItem}>
-          AddTask
+        <button class="button_plus" disabled={!text} onClick={addItem}>
+          <img class="plus_img" src={plus}></img>
         </button>
       </div>
       <div className="todosContainer">

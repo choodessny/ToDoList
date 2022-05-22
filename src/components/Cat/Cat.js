@@ -49,7 +49,7 @@ const Cat = () => {
   return (
     <div
       className="cat-container"
-      style={{ transform: `translate(${coords.x}vw, ${coords.y}vh)`,  }}
+      style={{ transform: `translate(${coords.x}vw, ${coords.y}vh)` }}
     >
       <img className={`cat ${animation && "animation"}`} src={img} />
     </div>

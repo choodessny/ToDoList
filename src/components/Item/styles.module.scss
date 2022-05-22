@@ -1,8 +1,19 @@
 .item {
-  color: rgb(51, 4, 51);
+  color: rgb(209, 105, 209);
   font-size: 50px;
 }
 .checked {
   text-decoration: line-through;
   color: aqua;
+}
+.container_for_delete {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkboxContainer {
+  display: flex;
+  align-items: center;
 }
