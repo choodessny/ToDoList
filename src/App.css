@@ -85,7 +85,33 @@ body {
 }
 .delete_all {
   display: flex;
-  justify-content: end;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.selected_all {
+  text-align: center;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 10px;
+  color: black;
+  font-family: "Exo 2", sans-serif;
+  font-style: normal;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgb(255 255 255 / 50%),
+    7px 7px 20px 0px rgb(0 0 0 / 10%), 4px 4px 5px 0px rgb(0 0 0 / 10%);
+  outline: none;
+}
+
+.selected_all:hover {
+  background: rgb(239, 20, 71);
+  background: linear-gradient(0deg, rgb(240, 19, 19) 0%, rgb(240, 55, 55) 100%);
 }
 
 .delete_selected {

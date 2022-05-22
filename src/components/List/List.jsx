@@ -70,8 +70,9 @@ const List = () => {
         {checkedTodos.length >= 1 && (
           <>
             <div class="delete_all">
+              <button class="selected_all">Выбрать всё</button>
               <button
-                class="delete_selected delete_selected-1"
+                class="delete_selected"
                 onClick={() => {
                   setTodos(
                     todos.filter((oldItem) => {
