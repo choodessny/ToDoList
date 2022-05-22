@@ -17,7 +17,7 @@ const Item = ({ item, onDelete, onChange }) => {
         style={{ color }}
       >
         <div className={classNames(styles.container_for_delete)}>
-          <div className={styles.checkboxContainergit}>
+          <div className={styles.checkboxContainer}>
             <input
               type="checkbox"
               checked={item.checked}
