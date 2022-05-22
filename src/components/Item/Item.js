@@ -3,7 +3,6 @@ import classNames from "classnames";
 import { useMemo } from "react";
 import getRandomColor from "../../utils/getRandomColor";
 import Cat from "../Cat/Cat";
-import trash from "../../resources/trash-can-solid.svg";
 
 const Item = ({ item, onDelete, onChange }) => {
   const color = useMemo(() => getRandomColor(), []);

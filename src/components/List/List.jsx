@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Item from "../Item/Item";
 import plus from "../../resources/plus-solid.svg";
+import classNames from "classnames";
 
 function getItem(item, setTodos, todos) {
   return (
@@ -66,6 +67,24 @@ const List = () => {
         <div>{uncheckedTodos}</div>
         {!!uncheckedTodos.length && !!checkedTodos.length && <hr />}
         <div>{checkedTodos}</div>
+        {checkedTodos.length >= 1 && (
+          <>
+            <div class="delete_all">
+              <button
+                class="delete_selected delete_selected-1"
+                onClick={() => {
+                  setTodos(
+                    todos.filter((oldItem) => {
+                      return !oldItem.checked;
+                    })
+                  );
+                }}
+              >
+                Удалить выбранное
+              </button>
+            </div>
+          </>
+        )}
       </div>
     </>
   );
