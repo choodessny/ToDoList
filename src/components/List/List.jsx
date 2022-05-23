@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Item from "../Item/Item";
 import plus from "../../resources/plus-solid.svg";
+import saveTodosKey from "../../constants/saveTodosKey";
 
 function getItem(item, setTodos, todos) {
   return (
@@ -30,7 +31,12 @@ function getItem(item, setTodos, todos) {
 }
 
 const List = () => {
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(
+    JSON.parse(localStorage.getItem(saveTodosKey)) || []
+  );
+  useEffect(() => {
+    localStorage.setItem(saveTodosKey, JSON.stringify(todos));
+  }, [todos]);
 
   const uncheckedTodos = todos
     .filter((item) => !item.checked)
