@@ -1,12 +1,12 @@
 .item {
+  margin: 5px;
   color: rgb(209, 105, 209);
   font-size: 30px;
   font-family: "Exo 2", sans-serif;
-  font-weight: 700;
+  font-weight: 500;
 }
 .checked {
   text-decoration: line-through;
-  color: aqua;
 }
 .container_for_delete {
   display: flex;
@@ -22,9 +22,10 @@
   align-items: baseline;
 
   input {
-    width: 20px;
-    height: 20px;
+    width: 17px;
+    height: 17px;
     cursor: pointer;
+    margin-right: 5px;
   }
 }
 svg {
