@@ -20,6 +20,12 @@
 .checkboxContainer {
   display: flex;
   align-items: baseline;
+
+  input {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
 }
 svg {
   filter: drop-shadow(4px 2px 2px rgb(0 0 0 / 0.3));

@@ -22,7 +22,9 @@ const Item = ({ item, onDelete, onChange }) => {
               checked={item.checked}
               onChange={() => onChange(!item.checked)}
             />
-            <span>{item.text}</span>
+            <span className="task_text" onClick={() => onChange(!item.checked)}>
+              {item.text}
+            </span>
           </div>
           {item.checked && (
             <div className="trash" onClick={onDelete}>

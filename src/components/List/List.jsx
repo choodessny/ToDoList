@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Item from "../Item/Item";
 import plus from "../../resources/plus-solid.svg";
-import classNames from "classnames";
 
 function getItem(item, setTodos, todos) {
   return (
@@ -9,7 +8,7 @@ function getItem(item, setTodos, todos) {
       onChange={(checked) => {
         setTodos(
           todos.map((oldItem) => {
-            if (oldItem != item) {
+            if (oldItem !== item) {
               return oldItem;
             } else {
               return { ...oldItem, checked };
@@ -47,10 +46,10 @@ const List = () => {
   };
   return (
     <>
-      <div class="container_for_search_line">
+      <div className="container_for_search_line">
         <input
           placeholder="Добавьте задачу..."
-          class="input_line"
+          className="input_line"
           value={text}
           onChange={(event) => setText(event.target.value)}
           onKeyDown={(event) => {
@@ -59,8 +58,8 @@ const List = () => {
             }
           }}
         />
-        <button class="button_plus" disabled={!text} onClick={addItem}>
-          <img class="plus_img" src={plus}></img>
+        <button className="button_plus" disabled={!text} onClick={addItem}>
+          <img className="plus_img" src={plus} alt="plus"></img>
         </button>
       </div>
       <div className="todosContainer">
@@ -69,10 +68,21 @@ const List = () => {
         <div>{checkedTodos}</div>
         {checkedTodos.length >= 1 && (
           <>
-            <div class="delete_all">
-              <button class="selected_all">Выбрать всё</button>
+            <div className="delete_all">
               <button
-                class="delete_selected"
+                className="selected_all"
+                onClick={() => {
+                  setTodos(
+                    todos.map((oldItem) => {
+                      return { ...oldItem, checked: true };
+                    })
+                  );
+                }}
+              >
+                Выбрать всё
+              </button>
+              <button
+                className="delete_selected"
                 onClick={() => {
                   setTodos(
                     todos.filter((oldItem) => {
