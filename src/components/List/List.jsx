@@ -32,7 +32,7 @@ function getItem(item, setTodos, todos) {
 
 const List = () => {
   const [todos, setTodos] = useState(
-    JSON.parse(localStorage.getItem(saveTodosKey)) || []
+    () => JSON.parse(localStorage.getItem(saveTodosKey)) || []
   );
   useEffect(() => {
     localStorage.setItem(saveTodosKey, JSON.stringify(todos));
