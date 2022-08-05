@@ -21,7 +21,7 @@ function App() {
               <List />
             </div>
             <div className="button_next_page_container">
-              <Link to={"/already_done"}>
+              <Link to={"/alreadydone"}>
                 <button className="button_next_page">
                   Открыть список сделанных задач
                 </button>
@@ -31,10 +31,17 @@ function App() {
         }
       />
       <Route
-        path="/already_done"
+        path="/alreadydone"
         element={
-          <div>
-            <ListChecked />
+          <div
+            className="container_main"
+            style={{
+              backgroundColor: getRandomColor(),
+            }}
+          >
+            <div>
+              <ListChecked />
+            </div>
           </div>
         }
       />

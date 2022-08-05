@@ -16,6 +16,7 @@ const Cat = () => {
       return () => clearTimeout(timeout);
     }
   }, []);
+ /* fdfjksjfkjs */
 
   useEffect(() => {
     const interval = setInterval(() => setAnimation(Math.random() > 0.8), 200);
